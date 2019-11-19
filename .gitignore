@@ -1,7 +1,8 @@
 private
 
-# Git credential file
+# Git credential and ignore file
 .gitconfig.local
+.gitignore
 
 # Ignore vim package files
 symlink/config/nvim/plugged/
