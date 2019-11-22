@@ -181,3 +181,27 @@ Run apt-get update, and the repository is ready for use. For example, you can in
 sudo apt-get update && sudo apt-get install metricbeat
 sudo update-rc.d metricbeat defaults 95 10
 ```
+
+## Install Packetbeat (optional)
+
+Download and install the Public Signing Key, ATH (if missing) and define repo:
+```
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://artifacts.elastic.co/packages/oss-7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+```
+
+Run apt-get update, and the repository is ready for use. For example, you can install Packetbeat by running:
+```
+sudo apt-get update && sudo apt-get install packetbeat
+sudo update-rc.d packetbeat defaults 95 10
+```
+
+Configure all the needed settings in /etc/packetbeat/packetbeat.yml
+
+When ready, start Packetbeat
+```
+sudo systemctl start packetbeat metricbeat
+sudo systemctl enable packetbeat metricbeat
+sudo systemctl status packetbeat metricbeat
+```

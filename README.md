@@ -4,4 +4,4 @@ This project includes a fast [installation](https://github.com/wixz/elastic_stac
 
 Since I'm using hardware from Ubiquiti (USG, AP, Switch e.t.c.) and pihole as internal DNS-Sinkhole, logstash filters for these logs can be found in /logstash/ and are currently not included as part of the installation guide.
 
-This is an early version of this public repo. expect more additions in the close future.
+This is an early version of this public repo. Expect more additions in the close future.
